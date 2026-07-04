@@ -1,0 +1,31 @@
+defaults:
+  - optimization: ls
+  - paths: default
+  - hydra: default
+
+
+
+random_seed: 42
+save_model: False
+
+trainer:
+  use_cuda: True
+  n_epochs: 100000 
+  warmup_epoch: 500 
+  lr: 0.001
+  final_lr: 0.0001
+
+data:
+  n_boundary: 500
+  n_initial: 500
+  n_internal: 20000
+  update_training_data: true
+  data_sampler: latin_hypercube
+  x_end: 5.0
+  x_start: -5.0
+  simulation_time: 1.570796327
+
+logger:
+  wandb: True
+  project: "MTL_PINN_optimization"
+  

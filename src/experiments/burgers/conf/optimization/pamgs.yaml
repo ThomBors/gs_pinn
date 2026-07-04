@@ -1,0 +1,4 @@
+method: pamgs
+gamma: 0.15
+momentum: 0.9
+beta2: 0.99

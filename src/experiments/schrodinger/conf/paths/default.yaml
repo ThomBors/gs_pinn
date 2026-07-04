@@ -1,0 +1,15 @@
+# path to root directory
+root_dir: ${oc.env:PROJECT_ROOT}
+
+data_path: ${hydra:runtime.cwd}/data/schrodinger/
+
+out_path: ${hydra:runtime.cwd}/results/schrodinger/${hydra:runtime.version}/outputs
+shp_path: ${hydra:runtime.cwd}/results/schrodinger/${hydra:runtime.version}/shp
+
+checkpoint_path: ${hydra:runtime.cwd}/checkpoints/schrodinger
+  
+# path to logging directory
+log_dir: ${paths.root_dir}/logs/train/
+
+# path to working directory
+work_dir: ${hydra:runtime.cwd}

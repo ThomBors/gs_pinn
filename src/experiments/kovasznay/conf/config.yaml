@@ -1,0 +1,36 @@
+defaults:
+  - optimization: ls
+  - paths: default
+  - hydra: default
+  - sharpness: default
+  - losslandscape: default
+  # - override hydra/launcher: submitit_slurm
+
+
+random_seed: 42
+final_model_save: False
+chk_save: False
+
+trainer:
+  use_cuda: True
+  n_epochs: 100000 
+  warmup_epoch: 500 
+  lr: 0.001
+  final_lr: 0.0001
+
+data:
+  n_boundary: 1000
+  n_internal: 20000
+  update_training_data: true
+  data_sampler: latin_hypercube
+  x_end: 1.0
+  x_start: -0.5
+  y_start: -0.5
+  y_end: 1.5
+  n_validation_point : 1001
+
+logger:
+  type: None
+  project: "MTL_PINN_kovasznay"
+  offline: False
+  

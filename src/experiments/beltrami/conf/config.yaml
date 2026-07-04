@@ -1,0 +1,38 @@
+defaults:
+  - optimization: ls
+  - paths: default
+  - hydra: default
+
+
+
+random_seed: 42
+save_model: False
+datasetname: beltrami
+
+trainer:
+  use_cuda: True
+  n_epochs: 100000 
+  warmup_epoch: 500 
+  lr: 0.001
+  final_lr: 0.0001
+
+data:
+  n_boundary: 5000
+  n_initial: 5000
+  n_internal: 25000
+  update_training_data: true
+  data_sampler: latin_hypercube
+  x_end: 1.0
+  x_start: -1.0
+  y_start: -1.0
+  y_end: 1.0
+  z_start: -1.0
+  z_end: 1.0
+  simulation_time: 1.0
+  n_validation_point: 2001
+
+logger:
+  wandb: True
+  project: "MTL_PINN_optimization"
+  
+  
