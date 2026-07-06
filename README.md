@@ -20,7 +20,7 @@ This study provides a systematic study of MTL optimisation for PINNs and highlig
     <img src="./extra/loss_landscape_traj_MTL.gif" width="800">
 </p>
 
-Comparison of different MTL methods for Loss landscape of the 2D Kovasznay flow across optimisers. Panels show $\log_{10}$ training loss over a 2D PCA subspace with iso-contours and projected learning trajectories (blue). 
+Loss landscape of the 2D Kovasznay flow across optimisers. Panels show $\log_{10}$ training loss over a 2D PCA subspace with iso-contours and learning trajectories (blue) on the loss 3D surface and 2D projection.
 
 ---
 
