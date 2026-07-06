@@ -1,12 +1,7 @@
 # Gradient Similarity Surgery in Multi-task Deep Learning
 Official implementation of the Gradient surgery methods for training Physics-Informed Neural Networks (under review at ACML)
 
-Physics-Informed Neural Networks (PINNs) optimise a composite objective that couples data fitting with physics-based constraints, yielding a highly imbalanced multi-task learning (MTL) problem. In practice, naive loss aggregation leads to conflicting gradient signals, slow convergence, and unstable training dynamics, particularly for stiff or high-frequency partial differential equations (PDEs).
-In this work, we conduct an extensive evaluation of modern MTL optimisation methods in the context of PINNs and provide an analysis of gradient conflicts during training. 
-Based on these insights, we propose PAM-GS, a physics-tailored gradient surgery method that leverages a landscape-aware strategy to mitigate gradient interference and improve optimisation performance.
-Empirically, we evaluate our method on canonical PDE benchmarks and show consistent improvements in convergence speed and solution accuracy over existing optimisation strategies. 
-This study provides a systematic study of MTL optimisation for PINNs and highlights the importance of landscape-aware gradient manipulation.
-
+Physics-Informed Neural Networks (PINNs) are trained by optimising a composite objective that combines data fitting with physics-based constraints, typically resulting in a highly imbalanced multi-task optimisation problem. In this setting, existing optimisation strategies are affected by conflicting task gradients, leading to slow convergence and unstable training, particularly for stiff and high-frequency partial differential equations. We investigate Multi-Task Deep Learning (MTDL) optimisation methods and analyse gradient conflicts throughout training of PINNs. Our analysis shows that angle-based gradient conflicts are predominant during the early stages of optimisation, whereas magnitude-based conflicts become the primary bottleneck later in training. Building on these observations, we propose PAM-GS, a physics-aware gradient surgery method that adaptively mitigates task interference during training according to the observed conflict regime. Experiments on four representative PDE benchmarks demonstrate that PAM-GS consistently improves both convergence balance and solution accuracy compared with existing optimisation methods.
 
 ---
 
