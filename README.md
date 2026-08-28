@@ -1,4 +1,4 @@
-# Gradient Similarity Surgery in Multi-task Deep Learning
+# Gradient Surgery for Physics-Informed Neural Networks
 Official implementation of the Gradient surgery methods for training Physics-Informed Neural Networks (under review at ACML)
 
 Physics-Informed Neural Networks (PINNs) are trained by optimising a composite objective that combines data fitting with physics-based constraints, typically resulting in a highly imbalanced multi-task optimisation problem. In this setting, existing optimisation strategies are affected by conflicting task gradients, leading to slow convergence and unstable training, particularly for stiff and high-frequency partial differential equations. We investigate Multi-Task Deep Learning (MTDL) optimisation methods and analyse gradient conflicts throughout training of PINNs. Our analysis shows that angle-based gradient conflicts are predominant during the early stages of optimisation, whereas magnitude-based conflicts become the primary bottleneck later in training. Building on these observations, we propose PAM-GS, a physics-aware gradient surgery method that adaptively mitigates task interference during training according to the observed conflict regime. Experiments on four representative PDE benchmarks demonstrate that PAM-GS consistently improves both convergence balance and solution accuracy compared with existing optimisation methods.
@@ -80,6 +80,7 @@ python trainer.py --method=X
 
 | Method (code name) | Paper (notes) |
 | :---: | :---: |
+| ConFIG (`config`) | [ConFIG: Towards Conflict-free Training of Physics Informed Neural Networks](https://arxiv.org/pdf/2408.11104)
 | Aligned-MTL (`alignedmtl`) | [Independent Component Alignment for Multi-Task Learning](https://openaccess.thecvf.com/content/CVPR2023/papers/Senushkin_Independent_Component_Alignment_for_Multi-Task_Learning_CVPR_2023_paper.pdf) |
 | FAMO (`famo`) | [Fast Adaptive Multitask Optimization](https://arxiv.org/abs/2306.03792.pdf) |
 | Nash-MTL (`nashmtl`) | [Multi-Task Learning as a Bargaining Game](https://arxiv.org/pdf/2202.01017v1.pdf) |
